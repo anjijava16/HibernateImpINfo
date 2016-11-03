@@ -1,0 +1,66 @@
+Student   StudentAddress
+std_id		std_id
+std_Name 	Foregin key of std_id of Student table
+
+The One-to-One relationship requires some “extra” code because it has a special property of inheriting the foreign key from the parent table (Employee) and using it as the primary key of the child table (Address). To facilitate this property, we need to be sure that the primary key on the child table actually references the primary key of the parent table
+
+
+
+RestExample
+
+
+OneToMany parent contina collection Type (List,set,Array's Map)
+
+
+Many To One child Class contains  Collection Type
+
+OneToMany(LIST) : If we take hbm file we know one point one additnal column is generated 
+
+ <bag name="stories" cascade="all">
+                 <key column="parent_id"/>
+                 <one-to-many class="com.iwinner.hb.dto.Story"/>
+          </bag>
+
+  <list name="stories" cascade="all">
+            <key column="parent_id"/>
+            <index column="idx"/>
+            <one-to-many class="com.iwinner.hb.dto.Story"/>
+        </list>
+
+
+OnetoMany and Many toOne
+
+
+
+
+
+MazyToMany and One To One
+
+ManyToOne                     ====>ManyToMany 
+OneToMany
+
+OneToMany  ManyToOne :::ManyToMany
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

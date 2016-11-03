@@ -1,0 +1,37 @@
+=============================== Criteria ====================================
+Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Admin.class);
+criteria.add(Restrictions.eq("userName", userName));
+return (Admin) criteria.uniqueResult();
+
+==================persistt()================================================
+sessionFactory.getCurrentSession().persist(course);
+
+====================list()======================================
+List<Course> courses = sessionFactory.getCurrentSession().createQuery("from Course").list();
+    
+===================== update======================================
+        sessionFactory.getCurrentSession().update(course);
+
+===================== delete ======================================
+sessionFactory.getCurrentSession().delete(course);
+
+========================= customer Info ========================
+Query query = sessionFactory.getCurrentSession().createQuery("Select distinct c from Customer c where c.userName=:username");
+query.setString("username", username);
+Customer customer = (Customer)query.list().get(0);
+
+=====================List of search Items ====================================
+Query query = sessionFactory.getCurrentSession().createQuery("select distinct p from Product p where p.productName like :searchText");
+ query.setString("searchText", searchText+"%");
+ List<Product> products = query.list();
+
+============================= Role Of selection ===========================
+   Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Role.class);
+    criteria.add(Restrictions.eq("roleName", roleName));
+    return (Role) criteria.uniqueResult();
+
+=================================================================
+
+   
+       
+

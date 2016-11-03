@@ -1,0 +1,24 @@
+
+
+i) Hibernate 
+   i)Persistance ::What is perstisnace 
+we have some option to make some data as persistnace
+i)Flat file
+emp.ext
+EX: 100 Kelwin Newyourk
+
+File save & bulk date ,secure
+ii) an XML FIle
+<employee>
+<empid>100</empid>
+<empname>kelwin</empname>
+<empaddress>newYork</empaddress>
+</employee>
+XML parser ,XML lang depedent
+iii)a Database 
+i)Database are simple to work with it
+ii)We have Queru lang (SQL)
+iii)A database can store large amount data
+
+
+

@@ -1,0 +1,62 @@
+
+Hibernate ::--->
+2 years ? 1.5 & node.js
+HIbernate is
+
+ 30 to 40 Max 
+
+
+JDBC examples :: with 2 DB(oracle,mysql) 
+i will give tools oracle/mysql 
+
+linux :
+tools oracle :SQLDevloper/toad oracle 
+              mysql :sqlYoga,HelidSQL,DBviziluar 
+
+JDBC examples:
+
+Hibernates : what Hiber ,why Hiber,
+
+ORM Object relation mapping ::
+
+Hibernate :HIbernate  :
+JPA :Sun(Oracle) :JPA
+TopLink (Apache)
+JDO(Apache)
+EJB (sun) 
+
+
+If we want One sample Hiberate
+
+i)Client 
+ii)hiber-cfg.xml(any time);properties 3.X
+iii)Mapping(Employee (@Table ,@Column @Id);Employee-hbm.xml
+
+FirstApplication_Basic 
+
+3.2(Annotaions ) HBM files Most project not hbm file they using annotaions
+
+method : 10 to 15 methods (perfomance issue)
+3.6.7
+4.x(4.x)
+
+
+Web -->10 Dev JDBC :: ORM (8 Dev): Code reduced
+
+JDBC : we write manually ORM : Hiberate 
+JDBC :
+
+
+
+
+HQL
+Criteira
+NavtiveSQL
+
+Relationships
+ONE-to-M
+M-to-M
+m- 
+
+
+

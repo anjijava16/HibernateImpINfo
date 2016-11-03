@@ -1,0 +1,39 @@
+
+Many TO One from a child Object to a Parent Object 
+Many to One a parent Object is added to Many child Objects 
+To apply mTO : assoation from child Object to its parent object 
+
+i)Child POJO Object class  awe need to reference ,
+poining to parent object class
+Child pojo we need to config many to one  point to parent class
+
+Parent POJO class for   ****TOMany,we need a reference of parent class in a Parent POJO class Collection class
+
+Many TO ONe we need a referenc of Parent class in a child class whene Many to One
+
+
+IF we are not use annotation based relation ship so at the time we need to HBM files 
+
+Upto Hibernarte 3.x we used HBM files
+From Hibernate 3.1. or later stared with HBM files bcoz JDK 5.x 
+
+Java Stared annnotation from JDK 5 we expect some annotatation only avaible in Hibnera tech :
+JPA (Specation)
+
+DTO Classes code bcoz of this classes are followed JPA (Specation's)
+
+DTO :
+
+LIST (
+
+IF we not annotation List inerface automatically one Index tag created in Table
+
+Map : IF we not annotation List inerface automatically one Index tag created in Table
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+Insert update delete   Non Select operation
+
+
+HQL : select Operation
+Insertion :::
+
+Criteria API
+
+get  or load methods times :: session.load(PojoName,SeriabzleId) or session.get(PojoName,SeriabzleId)
+
+HQL :: Query  query=session.creteQuery("QUery");
+
+Criteria 
+
+Criteria crit=session.creteCritira(Employee.class); Full object loading
+
+// Reflection API
+
+List<Employee> list=crit.list();
+for(Employee emp:list){
+sysout();
+}
+
+Criterion Interface for purpose this one specific condtions 
+
+Criteria crit=session.createCritria(Employee.class);
+Criterion criterion=Restrictions.eq("","");
+crit.add(criterion);
+
+
+POJO class 
+
+HQL : select * from employee where empId=10
+
+Query query=session.createQuery(select * from employee where empId=10 and empStatus='ACTIVE');
+List list=query.list();
+
+Criteria ::: =====>>>>
+
+Criteria crit = session.createCriteria(Employee.class);
+Criterion criterion1 = Restrictions.equal("empId", 10);
+Criterion criterion2 = Restrictions.equal("empStatus", "Active");
+Criterion criterion3 = Restrictions.and(criterion1, criterion2);
+crit.add(criterion3);
+List list=crit.list();		
+
+
+
+
+
+UI/JSP/JavaScript
+
+HQL Inserion we never used 
+
+List<Data> ldata=listOfData();
+
+Select Querys ::   
+
+Query query=session.createQuery("QUERY");
+
+List list=query.list();
+
+For the non select query's
+
+Query qyery=session.createQuery("Inser/Update/delete");
+
+int x=query.executeUpdate();
+
+
+Delete from  Employee_ONE where no=2
+select * from employee where empName like '%s%' santhi sagar sallem anjiahspr arujns
+
+UI 
+
+for(Data data:ldata){
+tx.beginTransxcion();
+session.save(data);
+tx.commit();
+}
+
+insert into Product(productId,proName,price)select i.itemId,i.itemName,i.itemPrice from Items i where i.itemId=10
+
+
+insert into Product(productId,proName,price) select i.itemId,i.itemName,i.itemPrice from Items i where i.itemId=10 (Excuteion First)
+Hibernate: insert into productsM ( pid, pname, price ) select items0_.itemId as col_0_0_, items0_.itemName as col_1_0_, items0_.itemPrice as col_2_0_ from items items0_ where items0_.itemId=10

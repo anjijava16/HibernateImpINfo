@@ -1,0 +1,64 @@
+
+ JDBC : 
+
+ JSE, JEE,JME
+
+ JSE : Core Conecepts 
+
+ OOPS 
+ File
+ Collection
+ Thread
+ Exception
+Relefectoin
+JNDI :::<-->(HIbernate) DataSources In  Java Nameing Directory Interface (DataSource)
+JDBC (JSE)
+
+JDBC ::    (Java Database connecti)
+
+
+Java Application can be store data
+
+
+File Size 1GB we able view 
+
+
+select * from employee where emp date is like '2014%'
+
+RDMS(
+ Oracle
+ MYSQL
+ DB2 DataBase
+ MySQL Server(microsoft)
+ PostDB
+ NOSQL
+ SQLLght
+
+ 
+Java (Software) 1.6 or 1.7
+Edit Plus (note pad ++)
+Eclipse (Juno Any version)
+
+DataBase ::
+ Oracle,MySQL
+  
+ JavaTpoint (Core Java Examples)
+ TutorilaPoint (practise core example)
+
+
+anjaiahspr@gmail.com
+anjaiahspr
+
+
+
+
+
+
+
+
+
+
+
+10GB ???
+
+

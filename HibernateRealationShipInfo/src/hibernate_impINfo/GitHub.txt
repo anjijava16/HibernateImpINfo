@@ -1,0 +1,17 @@
+GitHub Application APIS
+
+Application Name : GitHubApi
+
+
+Client ID
+c25f0b8e4cd46fd7c9c2
+Client Secret
+e17f239f4a1b594b6ab568550e6660058f21212a
+
+Home Page URL : https://github.com/anjijava16/HRPortal
+
+Authorization callback URL: https://github.com/anjijava16
+
+Token Description : Iwinner
+
+Token Key : 8cae9a063fa59aae8efd775c19ebb9eb463658b2 

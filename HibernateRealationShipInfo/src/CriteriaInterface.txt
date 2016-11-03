@@ -1,0 +1,61 @@
+Criteria API is used for Loading Objects from the database 
+using this Criteria API only select operation can be done.
+Criteria API hibernte interanlly uses reflection meca for reading  meta data of the pojo classes
+
+Criteria crit=session.createCriteria(Class.clazz)
+List list=crit.list();
+Iterator it=list.iterator();
+while(it.hasNext()){
+Employee emp=(Employee)it.next();
+sysout();
+
+While loading entities object from a database using criteria ,if we want to apply 
+a condition for loading objects then we need to create a Criterion obj and then  we need
+to add criterion obj to criteria object 
+
+Criterion is an interface and we get  its reference through Restrictions class
+
+========================================================================
+
+Criteria crit=session.createCriteria(Employee.class);
+Criterion criterion=Restrictions.ilike("mail","%s%");
+crit.add(criterion);
+List list=crit.list();
+==========================
+Criterion is an interface and we get its reference through Restriction class
+Restriction class is not a Drived class of critrion interface 
+Restrction is POJO class  all static methods and each static methods returns a critrion 
+object
+
+Criterion cond1=Restrions.eq("deptName",30);
+Criterion cond2=Restrions.gt("empSal",500);
+Criterion cond3=Restrions.like("empName","%s%");
+
+Criterion cond4=Restrions.and(cond1,cond2);
+Criterion cond5=Restrions.and(cond4,cond3);
+crit.add(cond5);
+List list=crit.list();
+
+===============================================
+
+Criteria crit=session.createCriteia(Employee.class);
+Order order=Order.desc("empSal");
+crit.addOrder(order);
+List list=crit.list();
+
+=============================
+Criteria crit=session.createCre();
+// Step 1
+Projection p1=Projections.property("empSal");
+Projection p1=Projections.property("empName");
+// step 2
+ProjectionList pList=Projections.projectionList();
+pList.add(p1);
+pList.add(p2);
+
+crit.setProjection(pList);
+
+Criteria crit=session.createCree();
+Projection p=Projections.proeprty("empName");
+crit.setProjection(p);
+List list=crit.list();

@@ -1,0 +1,29 @@
+   Relation Ships ::---->> 
+
+                          JPA ( Specification ) set of rules (SUN (Java Software) oracle software
+
+i)Hibernate  ii)Ibatics   iii)JPA itseflt imple   iv)JDO   v)TopLink        vi)OpenJpa
+
+
+HIbernate mapping /relation ships
+
+Collection Mappings
+Assocation mappings
+Relation Mappings
+
+	List   (Interface)
+Vector Stack ArrayList LinkedList
+ 
+      Set (Interface)
+
+HashSet SortedSet TreeSet
+
+Realation Mappings ::--->
+
+I)One -to -Many relation
+ii)Many -to-One relation
+iii)one -to -One relation
+iv)Many -to-Many relation
+
+
+

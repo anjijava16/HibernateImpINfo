@@ -1,0 +1,43 @@
+org.hibernate.id.IdentifierGeneratar Interface
+
+i) assigned
+<!--  Default Generator -->
+		<generator class="assigned"></generator>
+		</id>
+
+2)Increment ::
+Hibernate: select max(EID) from EmployeeHb_Ge
+Hibernate: insert into EmployeeHb_Ge (FIRSTNAME, LASTNAME, EMAIL, EID) values (?, ?, ?, ?)
+
+3)Sequence : Database Independt only work oracle not work in MYSQL
+Hibernate: select hibernate_sequence.nextval from dual
+Hibernate: insert into EmployeeHb_Ge (FIRSTNAME, LASTNAME, EMAIL, EID) values (?, ?, ?, ?)
+
+<generator>
+<param name="sequence">MySequence</param>
+</genetator>
+
+Other wise::
+If the programmer has not passed any sequence name, then hibernate creates its own sequence with name “Hibernate-Sequence” and gets next value from that sequence, and than assigns that id value for new record
+
+NOTE :
+But remember, if hibernate want’s to create its own sequence, in hibernate configuration file, hbm2ddl.auto property must be set enabled
+create sequence MySequence incremented by 5;
+first it will starts with 1 by default
+though you send the primary key value., hibernate uses this sequence concept only
+But if we not create any sequence, then first 1 and increments by 1..bla bla. in this case hibernate creating right..? so ensure we have hbm2ddl.auto enabled in the configuration file
+
+
+4)Identity:: Work only mysql DB not work in Oracle DB
+Hibernate: insert into EmployeeHb_Ge (FIRSTNAME, LASTNAME, EMAIL) values (?, ?, ?)
+
+5)native ::
+Hibernate: insert into EmployeeHb_Ge (FIRSTNAME, LASTNAME, EMAIL) values (?, ?, ?)
+
+6)foregin
+
+It is used for one -to -one relation time
+
+7)hilo
+
+8)UUID.hex

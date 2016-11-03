@@ -1,0 +1,19 @@
+Criteria crit=session.createCritiria(Employee.class);
+Criterion criterion=Restrtions.ge("","");
+crit.add(criterion);
+List list=crit.list();
+
+Adding sorting order to criteria::--
+
+While loading entities(objects) from a database using criteria,it is possible to apply
+some sorting order for loading the object 
+if we want apply some sorting order we need to add Order obj
+
+===============================================
+Loading Partial Object using criteria::-->>
+While loading object from a Database using criteria ,
+
+it is possible for loading particular proerties of objects ,instead of complte
+objects from a database.it is partial loading
+
+For Partial objecdt we need Projection object of each property

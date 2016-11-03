@@ -1,0 +1,20 @@
+ORM : Object relation modeling ::
+
+###Lets business code access objects rather than DB tables.
+###Hides details of SQL queries from OO logic.
+###Based on JDBC 'under the hood'
+###Transaction management and automatic key generation.
+###Fast development of application.
+###A technique to interact with transactional objects to perform dirty checking, lazy association fetching, and other optimization functions.
+
+Hibernate maps Java classes to database tables and from Java data types to SQL data types and relieve the developer from 95% of common data persistence related programming tasks.
+
+It is progrm tech :converting the data between the relations database and object oriented progra  lang such as Java,C#
+ORM Tech :
+ 
+ EJB,
+ TOpLink
+ JDO
+ JPA
+ Hibernate
+ Spring JDBC

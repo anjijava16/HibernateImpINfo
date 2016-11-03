@@ -1,0 +1,174 @@
+Bulk Operation permomation more than one operation select
+
+i)HQL  :: select or non select 
+   select * from PojoName where properityName='';
+ii)Criteria :: select Operation
+   select * from PojoName where properityName='';
+iii)NativeSQL :: pure JDBC Code :: select * from tableName where columnName=?
+                 or
+		 select * from tableName More Procedures and funtion NativeSQL
+
+NativeQuery     SQLQuery query=session.createQuery("select * from tableName");
+
+
+HQl :::		 Query query=session.createQuery("select * from PojoName");  //
+
+Cretirea :: select * from PoJOName
+HQL : Hibernate Query Lanaguage 
+
+select * from Employeee where empNo=100 but here we are selectin only one record 
+
+select * from Employee // Let us say this table contains 100 Records(100 Columns)
+
+ResultSet rs=stmt.executeQuery("select * from employee");
+
+select * from products --- Here i need to know what is table name 
+
+Client(Code)  --->hibernate.cfg.xml  --->HBM file --->POJO Classes (Product)
+
+select * from Product(POJO Classes Name)  (select * from produts(table Name)
+
+NoW Hibernarte 3.1 onwords Supports NON Select Query's HQL Supports both (Select and Non Select)
+
+===========================================
+update ,delete,insert 
+
+Please note here most programmer INsert operation not use Hibernate 
+
+select p.* from Product p
+(or)
+from Product
+
+Client Code  or Dao layer  HQL 
+
+
+Select * from emp;
+
+select e.* from Employee e
+
+(or)
+from Employee e
+
+Full loading 
+select e.empName,e.empSal from Employee e; Full loading
+
+Partial Loading
+select e.empName,e.empSal from Employee e where e.deptName=20
+
+In HQL Query to put a runtime value we can insert either a 
+
+i)Postional Parameter (?)
+ii)Named Parameter(:<name>)
+
+Query query=session.createQuery(QUERY);
+
+
+list() :: For Select Operation
+executeUpdate() :: for Non Select Operation
+
+Query query=session.createQuery(QUERY);
+List list=query.list();
+Iterator it=list.iterator();
+while(it.hasNext()){
+Object obj=(Object)it.next();
+Employee emp=(Employee)obj;
+sysout(emp.getXXX())
+}
+
+Way 2: Partial Loading:::--->>>
+List list=query.list().createQuery("Select empName,empSal from employee e");
+Iterator it=list.iterator();
+while(it.hasNext()){
+Object obj[]=(Object[])it.next();
+sysout(obj[1]+"  "+obj[2]);
+}
+
+Way 3:--->>> In this case reading a single property of an object (or) Objects from the DB using HQL Querys
+Query query=session.createQuery("select empName from employee emp");
+List list=query.list();
+Iterator it=list.iterator();
+while(it.hasNext()){
+String s1=(String)it.next();
+}
+For Select Operation we use list()
+
+
+select statemtnts :: select ** from POJO Classes Name
+
+
+========================================================================================
+
+  For Non Select Operations we use 
+  executeUpdate();
+
+Query query=session.createQuery("update Employee e set e.empSal=8000 where e.empId=10");
+Transaction tx=session.beginTransaction();
+int k=query.executeUpdate();
+tx.commit();
+
+HQL Insertion Operation 
+Query query=session.createQuery("insert into TesEmployee(empId,empName) select
+e.empId,e.empName from Employee e");
+");
+
+===========================================================================
+
+Criteria ::--It is used for loading entities objects from the database 
+using this criteria api,only select opeation can be done.can't do non select ops
+
+In Criteria interanlly uses reflection mechanism for reading metadata of pojo classes ,
+so we need to pass Class Object of a POJO classes for Hibernate
+
+while creating Criteria reference  we don't pass any  query as parameter insteda of query
+we pass  Class Object
+Criteria crit=session.createCriteria(Class.class);
+
+Criteria crit=session.createCriteria(Employee.class);
+List list=crit.list();
+========================
+Criteria crit=session.createCriteria(Employee.class);
+Criterion condition=Restrictions.ilike("empName","%s%");
+crit.add(condition);
+List list=crit.list();
+================================
+Criteria crit=session.createCriteria(Employee.class);
+Criterion cond1=Restrictions.eq("deptName",30);
+Criterion cond2=Restrictions.gt("empSal",5000);
+Criterion cond3=Restrictions.and(cond1,cond2);
+crit.add(cond3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

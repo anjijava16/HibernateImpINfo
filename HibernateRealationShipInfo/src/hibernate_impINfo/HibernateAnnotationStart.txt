@@ -1,0 +1,108 @@
+Session session =sessionFactory.opneSession();
+
+Session 'so many objects
+
+i) Select Operations   ii) Non Select Opertion
+ get()/load()             i)save(),update(),delete(),evict(),                     Single Row Operation(at a time One)
+			clear(),close(),persisent(),merge(),saveOrUpdate()
+
+SELECT * FROM EMPLOYEE WHERE EMPNO=10  (SINGLE ROW OPR'S)
+
+SELECT * FROM EMPLOYEE (MULTIPLE VALUES) :
+
+i)HQL,Hibernate query lanaguage)
+ii)Criteria (multiple oper's)
+iii)Native SQL (multiple opr's)
+
+Employee emp=(Employee)session.get/load(-,-); 
+
+List<Employee> listOf
+
+ Hibernate States of objects::-->
+ i)Transitent Object : here object no  way related with Database it is own object ( not use any methods)
+ ii)Persistent Object:: 
+ iii)detached Object
+ 
+			sessionFactory = HibernateUtils.sessionFactoryUtil();
+			Session session = sessionFactory.openSession();
+			Product p = new Product();
+			p.setProductId(101);
+			p.setProName("iPhone");
+			p.setPrice(25000);
+			// P object is transisetn state (
+			// I am creating P object here p Object
+         
+	 session.save(p);/// P is relative with Database it is callled Presistent Object
+
+
+Session session1=sessionFact.openSession();
+
+session1.close();
+
+Session session2=sessionFact.openSession();
+
+session2.get,load(
+
+
+
+
+
+
+ Hibenate 4.0 using
+ Hibernate 3.x:: annotations :::
+ JDK 5 .x Java introduced annotations 
+ @Override:://
+
+ what is annotations ????
+
+ @Override
+ @SuprreWaring
+ @Deprecatied
+
+ JEE:: (servlet/jsp) :: JDK 5 java requrie web.xml manadory :: JDK 6 web.xml optional
+ @WebRoot
+ @WebServlet("/abc")
+
+ How to create Custom annotations ???
+
+ii)Pojo :: 
+iii)cfg
+iv)Client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

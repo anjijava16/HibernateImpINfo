@@ -1,0 +1,25 @@
+Positional parameter(?)
+Named Paramerters  (:<name>)
+select e.empName,e.empSal from Employee where e.empId=:empId;
+SQLQuery qry=session.createSQLQuery("SQL Commands");
+While selecting a full object or from a database using Native SQL interanlly hibernate convers each row of ResultSet into an Object[].but not a Pojo class obj.
+===========================================================
+SQLQuery query=session.createSQLQuery("select * from EmployeeHb_ONE");
+		List lis=query.list();
+		Iterator it=lis.iterator();
+		while(it.hasNext()){
+			Object obj[]=(Object[])it.next();
+			System.out.println(obj[0]+"  "+obj[1]+"  "+obj[2]+"  "+obj[3]);
+}
+=======================================addEntity(Employee.class)================================
+while execcting a Native SQL query for loading a full object or objects from a database then we can inform the hibernate that convert each row of ResultSet into a pojo class instead of Object[]
+
+To inform the Hibenrate that convert internally each row into a POJO class object  we call addEntity() method 
+SQLQuery query=session.createSQLQuery("select * from EmployeeHb_ONE");
+		query.addEntity(Employee.class);
+		List<Employee> listOfEmployees=query.list();
+		for(Employee emp:listOfEmployees){
+			System.out.println(emp.getFname()+"  "+emp.getNo()+"  "+emp.getMail());
+}
+
+===============================================================================

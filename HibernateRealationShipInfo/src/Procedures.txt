@@ -1,0 +1,88 @@
+
+http://www.javatechtipssharedbygaurav.com/2013/05/how-to-call-stored-procedure-in_2.html
+SELECT *  FROM employeehb_one where EID = id;
+
+Procedure name : SP_SELECT_EMPLOYEE
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SELECT_EMPLOYEE`(IN `EMP_ID` INT)
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+
+SELECT *  FROM employeehb_one where EID = EMP_ID;
+END
+===================================================================
+USER_INSERTION
+CREATE TABLE `user_insertion` (
+	`USER_ID` INT(20) NOT NULL,
+	`USER_NAME` VARCHAR(50) NULL DEFAULT NULL,
+	`USER_ADD` VARCHAR(50) NULL DEFAULT NULL,
+	`USER_DESG` VARCHAR(50) NULL DEFAULT NULL,
+	`USER_SAL` INT(11) NULL DEFAULT NULL,
+	`USER_REG_DATE` DATE NULL DEFAULT NULL,
+	PRIMARY KEY (`USER_ID`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_PRO_USER_INSERTION`(IN `USERID` INT, IN `USERNAME` VARCHAR(50), IN `USERADD` VARCHAR(50), IN `USERDESG` VARCHAR(50), IN `USERSAL` INT, IN `USERREGDATE` DATE)
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+INSERT INTO  USER_INSERTION(USER_ID,USER_NAME,USER_ADD,USER_DESG,USER_SAL,USER_REG_DATE) VALUES(USERID,USERNAME,USERADD,USERDESG,USERSAL,USERREGDATE);
+END
+
+INSERT INTO  USER_INSERTION(USER_ID,USER_NAME,USER_ADD,USER_DESG,USER_SAL,USER_REG_DATE) VALUES()
+
+2015-07-25 
+====================================
+EMAIL
+employeehb_one
+
+procedure Name : SP_PRO_SEL_EMAIL
+
+CREATE PROCEDURE `SP_PRO_SEL_EMAIL`(IN `EMP_ID` INT, OUT `EMAILID` VARCHAR(50))
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT 'SP_PRO_SEL_EMAIL'
+BEGIN
+
+SELECT EMAIL INTO EMAILID  FROM employeehb_one where EID = EMP_ID;
+
+
+END
+
+ Calling another procedures :
+/***
+create procedure myProcedure_only_in_parms (
+   in in_Id int)
+begin
+call myProcedure(in_id,@out_Id) ;
+select @out_id
+END;
+
+***/
+=============
+HIbernate not support direcly out pamaters : User indirect way  calling from from procedures to another procedures
+
+CREATE PROCEDURE `SP_PRO_OUTPARMS_CALL`(IN `EMPID` INT)
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+
+call SP_PRO_SEL_EMAIL(EMPID,@out_Id) ;
+select @out_id;
+
+END

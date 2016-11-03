@@ -1,0 +1,200 @@
+ORM ::  Dao Layer --->>
+1)What is Hibernate
+ii)ORM example
+ 	
+
+JPA ::: -->> Sun micro system(oracle) :: Implemenation (done by hibenrare,jdbc,ejb,Toplinks,Ibatics)
+
+Hiberat::--->
+
+
+hibenrare,ejb,Toplinks,Ibatics,Spring JdBC,Spring ORM
+
+   (JDBC) Jars ::
+
+ JSP/HTML/jquery/xslt/UI ----> Servlet ------>>>> JDBC(or)Hiberante (feel like Core Java(JDBC/hibernate)
+
+ HTML/PHP/HTML/jquery/xslt/UI---->>>PHP--------->>>DB connection with PHPCode or Some controller 
+       (like <?php class Controller-----?> OOPS prinicples (security)
+
+
+Adv Hiberantes:
+i)Relationships
+ii) cache 
+iii)Exception 
+
+Red* Mark Class.forName(""); Eclipse level we see some errors SQLException(Checked Type)
+
+iv)HQL ::Hibernate Query lanaguage,
+
+v)Database indepedent Tech
+
+ResultSet rs=stmt.executeQuery("select * from Employee where empNo=100")
+
+  (===)
+
+SessionFactory sessionFactory=new Configuration();
+Session session=sessionFactory.getSession();
+Employee employee=session.get(Employee.class,100); (Hibernate jars file internal logic is JDBC Logic)
+
+
+
+
+
+Hibernate :4.3 Version:: Max things annotaions
+Hibernate : 3.6.7Version Here also annotations 
+SourcForge.org/com
+
+
+
+
+
+
+
+select Operation's : 
+One to Many
+Many to one
+Many to many
+one to many
+
+User login is system -->succesfully completed --->after doing some operation's ==>one request(30Secnds)
+
+2nd requesert not going database -->cache memory
+Client --->>> database (it is reducing the round trips between application and database)::-
+
+iii)
+Adv:
+Opensource and lightweight
+Fast Permonance : Cache Internal
+Database Independt Query
+Automatic table Creation
+Simpilifiy the join
+
+Exception translator : Conver all checked Exception into UnchekedException reduced Prog dev work
+
+cache : reduce round trips between java and db
+Hibernate relation is easy way
+class must be public ,set && getter methods,default consturfg
+
+
+JNDI ::: Code
+
+JNDI : Inside Our Server :Tomcat,Weblogic,Websphere
+
+JNDI::
+
+Here no need to all database connection details like manullay
+
+driverName.
+URL
+Usernmae
+password
+
+The above things we are configured in side our server
+  ***PoJO **** 
+plan old java Object 
+public class Employee{ can't be extends or implents Any Predenied of Framework Realted Class
+
+// It might be extends or interface only Core Tech(JSE)
+
+// Fileds
+private String empName;
+private String empDesg;
+
+public Employee(){
+}
+public Employee(String empName,String empDesg){
+this.empName=empName;
+this.empDesg=empDesg;
+}
+/// setXXXX() &&& getXXXX()
+
+}
+
+public class Employee implements java.io.Othere Class or custom Class{ // POJO
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In Java Tech if we write one class 
+public class Employee implemetns java.io.Ser{
+
+// Fileds
+private String empNum;
+private String empDesg;
+private Order orderObj;
+setter&&Getter()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Package :Any Folder ,collection class,Class pre
+
+class
+intefaces
+enums
+Pred Variables
+P
+what is default package
+java.lang
+
+
+What is  POJO (doesn't exetneds/ implem any class or interface but core is no problem
+iv)HB Archciture : Pojo,hbm(Mapping) cfg(configuration) (Low Level Arch)
+v)HB hight Level : java Application (internal) 
+vii) See Hibernate PDF (25 Page)
+viii) we are using 2 packages
+I)import org.hibernate.cfg.*; 
+II)import org.hibernate.*;
+=========================
+Data store Different Ways:
+ix) Flat File
+x)XMl 
+xi)Database file
+
+===================
+========================>>> Mapping in Hibernate  <<<============
+ 2 ways i)HBM file (example POJO and HBM )ii)Annotations
+id===>Primary Key
+Non Id: <properity>
+multiple <compsite-id>
+
+Configuration contatns 3 details
+i)Connection properties
+ii)Hibernate properties
+iii)Mapping properties
+===============================
+

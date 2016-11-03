@@ -1,0 +1,46 @@
+Session session=sessionFactory.openSession();
+session.load(),get(),save(),delete(),update(),close()  ===> Single Row Operation
+
+All methods::
+load/get --->select Operation
+Non select ops::
+	i)save(obj),persist(obj),saveOrUpdate(obj)// saving purpose but last one also use for update purpose also
+        ii)delete(obj) 
+	iii)merge(obj),update(obj);
+	iv)clear(),evict(obj)
+
+If we want select multiple rows at a time we need to go HIbenrate Query langugages
+i)HQL : SELECT * FROM EMPLOYEE EMP
+ii)Critieria
+iii)NativeSQL :: SQLQuery insertCernerData = session.createSQLQuery(sqlCallProcedure);
+ select * from emp (plan jdbc layer)
+Mutliplse rows means : select * from Employee it is multiplse rows
+
+In java if we want select multiple values generally we are going with collections (list,set,map)
+similiary if we want select multiple values we using the above 3 statements with collections or arrays
+
+cache :--->>>
+Cache : Default cache mechanism
+Cache use reduce the round trips from application to Database
+if we are not using cache it will more round trips 
+if we use cache it is reducing the round trips
+
+For cache purpose : we are using 2 methods : clear(),evict(object);
+
+Session session=sFact.openSession();
+
+session.clear();
+
+session.evict(object)
+
+Hibernate Object states::
+
+
+
+
+
+
+
+
+
+

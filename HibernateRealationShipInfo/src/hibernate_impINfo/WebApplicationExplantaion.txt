@@ -1,0 +1,44 @@
+Generators:
+Connection pool's
+Bulk Operations's : HQL
+Interharicnce 
+ 
+=================================
+WebApplication Integration iN Hibernate 
+
+I)LoginSystem ::-->
+
+login.jsp --->if you click login/submit
+
+
+<form action="abc" method="get">
+UserName:<input type="text" name="username" id="usename"/>
+Password:<input type="password" name="pwd" id="pwd"/>
+<input type ="submit">
+</form>
+
+web.xml<web-app>
+<servlet>
+  <servlet-name>LoginSS</servlet-name>
+   <servlet-class>com.iwinner.web.LoginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>LoginSS</servlet-name>
+<<url-mapping>/abc</url-mapping>
+</servlet-mapping>
+</web-app>
+
+
+LoginServlet 
+
+
+
+Servlet (Interface) (5)
+    
+GenericSevlet(All Imple) implements Servlet
+
+HttpServlet extends GenericServlet
+
+OurClassSevlet extends HttpServlet
+

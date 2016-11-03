@@ -1,0 +1,87 @@
+   **  Connection based connection : Nothing but we are not using any server realted connection 
+
+   javax.sql.DataSource
+
+   jdbc:mysql://localhost:3306/bts
+
+
+   First Application UP (Server must running mode) :
+
+   JNDI Java naming Directory Inteface (API) JSE
+
+   JSE,JEE,JME
+   JSE (Core Java) Collection,iO.lang,
+
+   import javax.naming.Context;
+   import javax.naming.InitialContext;
+
+Domain HeatlhCare System
+
+   Doctor_TBL                             Patient_TBL
+
+   DOC_ID DoC_Name                    
+   PK     
+
+Patient_TBL
+Patient_ID
+Patient_Name
+Patient_Add
+Patient_Dise
+Patient_Date_join
+
+Foreign Key Concepts
+
+Patient_ID
+Patient_name
+Pateint_Add
+Pat_Dise
+patient_date_join
+Doc_ID (FK) is here foreign key of Doctor Table
+
+One To many
+Many to One
+Many to many
+One to One
+
+
+
+One To many :: 
+
+I)VendorDTO  II)CustomerDTO
+
+ParentTable to Child Table 
+
+Student and BOOK
+
+One Student Contains many BOOKs
+Student Parent Table and BOOKS child table
+
+
+One Vendor Contains Many Customer 
+
+Vendor Parient Table And Customer child
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

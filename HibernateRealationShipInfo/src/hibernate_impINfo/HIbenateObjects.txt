@@ -1,0 +1,76 @@
+Hibernate cacheing :clear() all sessions
+evict(object) particular object clear the cache
+Hibernate flushing:
+the changes are trasnfered the cache memory to the database this operation
+is called flusing
+Transient State
+Persistent state
+Detached state
+
+Note assocatied with session
+Product p=new Product();
+p.setXXX();
+
+// here p is not assoctied with session
+any ops : save(),load()
+session.save();session.load();
+it will effected into the database
+session.save(p);
+p here persis
+
+or 
+Product p=(Product)session.load(-,-);
+
+Deetached State::
+session.close();session.clear();session.evict()// detached state
+not effected in database
+Detached state is nothing but out of the session
+Transtient state is nothing but enter a session
+
+Production p=null;// p is here :transisent state
+p=(Product)session.load(); --here persistent state
+session.close();p is here detached state
+
+Trasient state
+
+save()
+persiste()
+saveOrUpdate()
+
+perstistenState::
+evict
+clear
+close()
+Detached state
+
+
+Detached state:
+saveorUpdate();
+merge()
+update();
+persistent state
+
+delete ();
+traisnte state
+
+trasinset state --->load/get persistent state
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+ OneToMany
+ ManyToOne
+
+ OneToOne
+ ManyToMany
+
+OneToMany :: Collection Type must be Parent Class ,But the relation ship one Vendor contains multiple customer 
+
+Ex: Vendor to Customer (One vendor to Multiple Customers)
+
+ManyToOne :: Collection Type must be child Class,and Parent class doesn't require collection type 
+
+Ex:Customer to Vendor 
+
+ManyToMany : In case of Many to Many it will be generated one addtinal table called JoinTable (EMP_DEPT) 
+
+JOIN_Table : Both Tables information
+
+OneToONE: OneToOne Primary key @PrimaryKeyJoinColumn
+OneToOne:  OneToOne with Forign Key @JoinColumn

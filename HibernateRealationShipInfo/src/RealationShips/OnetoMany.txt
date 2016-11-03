@@ -1,0 +1,117 @@
+One-to-Many
+
+One record table is relatead to many records in other table
+Ex: Student and Book  a Student have many no.of books
+
+public class 
+
+
+CREATE TABLE BusStop ( 
+ID int NOT NULL,
+Description varchar(40) NOT NULL,
+PRIMARY KEY (ID))
+Engine=InnoDB;
+
+CREATE TABLE Route ( 
+Route_Number int NOT NULL,
+Destination int NOT NULL
+Frequency int NOT NULL,
+Start int NOT NULL,
+PRIMARY KEY (Route_Number),
+FOREIGN KEY (Destination) 
+REFERENCES BusStop(ID),
+FOREIGN KEY (Start) REFERENCES BusStop(ID) 
+Engine=InnoDB
+
+Ans:
+public class BusStop {
+
+public static final String SELECT_ALL = "BusStop.selectAll";
+
+@Id
+@Column(name = "id")
+private int id;
+
+@Column(name = "description")
+private String description;
+
+public BusStop(){}
+public int getId(){
+    return id;
+}
+
+public void setId(int id){
+    this.id = id;
+}
+
+public void setDescription( String description ) {
+    this.description = description;
+ }
+
+public String getDescription() {
+    return description;
+ }
+
+@OneToMany(mappedBy="startRef")
+private Set<Route> startStop;
+
+@OneToMany(mappedBy="destRef")
+private Set<Route> destStop;
+
+}
+Route.java
+
+@Table(name = "route")
+public class Route {
+public static final String SELECT_ALL = "Route.selectAll";
+
+@Id
+@Column(name = "route_number")
+private int route_number;
+
+@Column(name = "destination")
+private int destination;
+
+@Column(name = "frequency")
+private int frequency;
+
+@Column(name = "start")
+private int start;
+
+private Set<Operator> operators = new HashSet<Operator>();
+
+public Route(){}
+
+// getters & setters
+
+@ManyToOne
+@JoinColumn(name="start")
+private BusStop startRef;
+
+@ManyToOne
+@JoinColumn(name="destination")
+private BusStop destRef;
+Thank you for your help.
+
+java mysql hibernate
+shareimprove this question
+asked May 7 at 22:05
+
+Nick
+516
+add a comment
+1 Answer
+activeoldestvotes
+up vote
+1
+down vote
+Generally Okay . Update Route to these to use the key. Note you have these values just correcting the column name
+
+@ManyToOne
+@JoinColumn(name="id")
+private BusStop startRef;
+
+
+@ManyToOne
+@JoinColumn(name="id")
+private BusStop destRef;

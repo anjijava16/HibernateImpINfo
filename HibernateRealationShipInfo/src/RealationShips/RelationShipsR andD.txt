@@ -1,0 +1,19 @@
+One To Many
+
+IMP Points:: --->>>
+i)CacaseCade
+ii)LazyLoading by default (if we require we can enable early Loading)
+
+If One department can employee for serveral employeees then(O2M) and 
+Department to Employee is One-to-Many
+while employee to department relationship is Many to One (many employee work on depart)
+
+In One to many mapping is made b/w 2 entites where first entity can have relation with mutliple second entity instance but 2nd can be associatged with only one instance of first entity.
+
+
+@GeneratedValues : means it is auto matically generated AUTO_INCREMENT
+<!-- Enable Hibernate's automatic session context management -->
+<property name="current_session_context_class">thread</property>
+
+@OneToOne or a @ManyToOne association is EAGER.
+

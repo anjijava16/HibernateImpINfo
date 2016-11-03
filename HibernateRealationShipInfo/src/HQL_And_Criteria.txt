@@ -1,0 +1,36 @@
+HQL is to perform both select and non-select operations on the data, but Criteria is only for selecting the data, we cannot perform non-select operations using criteria.
+
+HQL is suitable for executing Static Queries, where as Criteria is suitable for executing Dynamic Queries.
+
+HQL doesn’t support pagination concept, but we can achieve pagination with Criteria 
+Criteria used to take more time to execute then HQL.
+
+With Criteria we are safe with SQL Injection because of its dynamic query generation but in HQL as your queries are either fixed or parametrized, there is no safe from SQL Injection.
+
+
+Examples: 
+Query query = session.createQuery("from Student"); 
+List list=quey.list();
+
+Query query = session.createQuery("update Student where studentid=9"); 
+int result=query.executeUpdate();
+
+Query query = session.createQuery("delete Student where studentid="+ studentId); 
+int result=query.executeUpdate();
+
+Query query = session.createQuery("insert into Student where studentid="+ studentId); 
+int result=query.executeUpdate();
+
+session.createSQLQuery()-> Can create query using SQL and can perform CRUD Operations
+
+session.createCriteria()->Can create query using Criteria API and can perform only Read Operations
+It is an object oriented representation of Hibernate Query. The object of Query can be obtained by calling the createQuery() method Session interface.
+
+The query interface provides many methods. There is given commonly used methods:
+
+public int executeUpdate() is used to execute the update or delete query.
+public List list() returns the result of the ralation as a list.
+public Query setFirstResult(int rowno) specifies the row number from where record will be retrieved.
+public Query setMaxResult(int rowno) specifies the no. of records to be retrieved from the relation (table).
+public Query setParameter(int position, Object value) it sets the value to the JDBC style query parameter.
+public Query setParameter(String name, Object value) it sets the value to a named query parameter.

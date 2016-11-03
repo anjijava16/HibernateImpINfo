@@ -1,0 +1,57 @@
+  Oracle ::-->>>  39 Relation databases 
+MySQL :--> Oracle (Most project's real time using Oracle DB) Not Open source we need to pay some amount oracle.org
+Relation database 
+It is primary foreginkey based 
+
+varchar2(20); it is wrong in mYSQL
+varchar2(20); Oracle 
+
+number datatype is equal to int datatype in mysql DB
+
+Pro,fun conecepts 
+
+create database indu's
+
+SQL Developer Tool it is for Oracle 
+
+Oracle Database : ojdcb14.jar (for mysql_connector.jar)
+ ojdbc14.jar,ojdbc5.jar
+
+
+
+
+
+
+
+Not mentioned any Generator  it will take default denerator assigned
+
+i)assigned
+ii)incremnt
+iii)sequence
+iv)hilo
+v)identity
+vi)native
+vii)foregin
+viii)uuid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

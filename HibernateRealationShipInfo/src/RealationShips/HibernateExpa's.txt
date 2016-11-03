@@ -1,0 +1,21 @@
+In order to reduce the redundany of the data in Database tables
+Doctor_TBL         
+DocID DOcName DOC_Spe 
+Patient_TBL
+Pat_id Pat_name Pad_address pad_doc_id
+The above 2 tables data is not relation not usefull data
+
+Doct_info table is Parent_TBL or master table 
+Patie_TBL childTBL or detailed Table
+This connectpts assocation Mappings
+
+i)While creating a parent Pojo class,we need to add an
+additinal property of Type collection ,this collection
+is used to store many child object in a parent object
+
+Parent side require collection that is mapped to child class 
+
+Cacasade attribute is used to inform the hibernate about the non -select operations 
+should be trnasfered (applied cascade) on relationship object of on object
+
+
